@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <package name="inventory" namespace="/inventory" extends="default">
+        <default-interceptor-ref name="crudStack"/>
+       
+        <action name="inventoryAction" class="com.mss.ediscv.inventory.InventoryAction" method="prepare">
+            <result>/inventory/Inventory.jsp</result>
+            <result name="error" type="redirect" >../exception/exception.action</result> 
+            <result type="redirect" name="login">../general/login.action</result> 
+        </action>
+        
+        <action name="inventorySearch" class="com.mss.ediscv.inventory.InventoryAction" method="getInventorySearchQuery">
+            <result>/inventory/Inventory.jsp</result>
+            <result name="error" type="redirect" >../exception/exception.action</result> 
+            <result type="redirect" name="login">../general/login.action</result>       
+        </action>
+        
+    </package>
+</struts>

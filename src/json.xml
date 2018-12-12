@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+
+<struts> 
+<package name = "jsonpack" namespace = "/jsonpack" extends="default"> 
+<!-- <interceptors>
+<interceptor-stack name = "mystack"> 
+<interceptor-ref name = "json">
+<param name = "enableSMD"></param> 
+</interceptor-ref>
+<interceptor-ref name = "defaultstack"></interceptor-ref>
+</interceptor-stack> 
+</interceptors>-->
+<default-interceptor-ref name = "crudStack"/>
+<action name="codeVersionUpdate" class="com.mss.ediscv.utilities.CertMonitorAction" method="doCodeVersionUpdate"/>
+<!--<result type ="json"></result>-->
+</package>
+
+</struts>

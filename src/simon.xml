@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : simon.xml
+    Created on : dec 4, 2017, 7:59 pM
+    Author     : janardhan
+    Description:
+        Purpose of the document follows.
+-->
+
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <package name="simon" namespace="/simon" extends="default">
+        <default-interceptor-ref name="crudStack"/>
+         <action name="transactionInformation" class="com.mss.ediscv.logisticsdoc.LogisticsDocAction">
+            <result>../simon/transactionInformation.jsp</result>
+             <result name="error" type="redirect" >../general/exception.action</result> 
+            <result type="redirect" name="login">../general/login.action</result>   
+         </action>
+         
+         <action name="transactionSearch" class="com.mss.ediscv.simon.SimonAction">
+            <result>../simon/transactionSearch.jsp</result>
+             <result name="error" type="redirect" >../general/exception.action</result> 
+            <result type="redirect" name="login">../general/login.action</result>   
+         </action>
+         
+         <action name="partnerList" class="com.mss.ediscv.logisticsdoc.LogisticsDocAction">
+            <result>../simon/partnerList.jsp</result>
+             <result name="error" type="redirect" >../general/exception.action</result> 
+            <result type="redirect" name="login">../general/login.action</result>   
+         </action>
+         
+         <action name="deliveryChannelList" class="com.mss.ediscv.simon.SimonAction" method="getDeliveryChannelList">
+            <result>../simon/deliveryChannelList.jsp</result>
+             <result name="error" type="redirect" >../general/exception.action</result> 
+            <result type="redirect" name="login">../general/login.action</result>   
+         </action>
+         
+         <!-- new action to search the records for transaction search usecase -->
+           <action name="transactionSearchDetails" class="com.mss.ediscv.simon.SimonAction" method="getTransactionSearch">
+            <result>../simon/transactionSearch.jsp</result>
+             <result name="error" type="redirect" >../general/exception.action</result> 
+            <result type="redirect" name="login">../general/login.action</result>   
+         </action>
+         
+    </package>
+</struts>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : reports.xml
+    Created on : February 6, 2015, 12:37 PM
+    Author     : miracle
+    Description:
+        Purpose of the document follows.
+-->
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <package name="reports" namespace="/reports" extends="default">
+        <default-interceptor-ref name="crudStack"/>
+        
+        <action name="getReports" class="com.mss.ediscv.reports.ReportsAction" method="getReports">
+            <result>Reports.jsp</result>
+            <result name="error" type="redirect" >../general/exception.action</result> 
+            <result type="redirect" name="login">../general/login.action</result>
+        </action>  
+         
+        <action name="reportsSearch" class="com.mss.ediscv.reports.ReportsAction" method="reportsSearch">
+            <result>Reports.jsp</result>
+            <result name="error" type="redirect" >../general/exception.action</result> 
+            <result type="redirect" name="login">../general/login.action</result>
+        </action>  
+         
+        <action name="dashboard" class="com.mss.ediscv.reports.ReportsAction" method="getDashboard">
+            <result>DashBoard.jsp</result>
+            <result name="error" type="redirect" >../general/exception.action</result> 
+            <result type="redirect" name="login">../general/login.action</result>
+        </action>      
+        <action name="getTrackInOut" class="com.mss.ediscv.editracking.TrackInOutAction" method="getTrackDetails">
+            <result>TrackInOut.jsp</result>
+            <result name="error" type="redirect" >../general/exception.action</result> 
+            <result type="redirect" name="login">../general/login.action</result>
+        </action>  
+        <action name="trackInOutSearch" class="com.mss.ediscv.editracking.TrackInOutAction" method="trackInOutSearch">
+            <result>TrackInOut.jsp</result>
+            <result name="error" type="redirect" >../general/exception.action</result> 
+            <result type="redirect" name="login">../general/login.action</result>
+        </action> 
+         
+         
+        <action name="getTrackSummary" class="com.mss.ediscv.editracking.TrackInOutAction" method="getTrackDetails">
+            <result>TrackSummary.jsp</result>
+            <result name="error" type="redirect" >../general/exception.action</result> 
+            <result type="redirect" name="login">../general/login.action</result>
+        </action>  
+        <action name="trackSummarySearch" class="com.mss.ediscv.editracking.TrackInOutAction" method="trackSummarySearch">
+            <result>TrackSummary.jsp</result>
+            <result name="error" type="redirect" >../general/exception.action</result> 
+            <result type="redirect" name="login">../general/login.action</result>
+        </action> 
+         
+         
+         
+        <action name="getTrackInquiry" class="com.mss.ediscv.editracking.TrackInOutAction" method="getTrackDetails">
+            <result>TrackInquiry.jsp</result>
+            <result name="error" type="redirect" >../general/exception.action</result> 
+            <result type="redirect" name="login">../general/login.action</result>
+        </action> 
+        <action name="trackInquirySearch" class="com.mss.ediscv.editracking.TrackInOutAction" method="trackInquirySearch">
+            <result>TrackInquiry.jsp</result>
+            <result name="error" type="redirect" >../general/exception.action</result> 
+            <result type="redirect" name="login">../general/login.action</result>
+        </action> 
+    </package>
+</struts>
+

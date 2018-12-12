@@ -1,0 +1,21 @@
+<script type="text/javascript" src='<s:url value="../includes/plugins/daterangepicker/daterangepicker.js"/>'></script>
+
+
+
+ <script type="text/javascript" src='<s:url value="../includes/js/DateValidation.js"/>'></script>
+ 
+ 
+ 
+  <div class="col-sm-3"> <label>Date range</label>
+                                                        <s:textfield name="reportrange"  id="reportrange" cssClass="form-control pull-left"   value="%{reportrange}"  /> 
+                                                    </div>
+													
+													
+													 <script type="text/javascript" src='<s:url value="../includes/js/Correlation.js"/>'></script>
+													 
+													 <link rel="stylesheet" href='<s:url value="/includes/plugins/daterangepicker/daterangepicker.css"/>' type="text/css"> 
+													 
+
+LtExcelReports calendar allignment..											 
+Manu/ExcelReports calendar allignment..
+Forget Pwd  msg not clearing..

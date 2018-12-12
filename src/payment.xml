@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <package name="payment" namespace="/payment" extends="default">
+        <default-interceptor-ref name="crudStack"/>
+        
+        <action name="paymentAction" class="com.mss.ediscv.payments.PaymentsAction" method="prepare">
+            <result>/payment/Payments.jsp</result>
+            <result name="error" type="redirect" >../exception/exception.action</result> 
+            <result type="redirect" name="login">../general/login.action</result>
+        </action>
+            
+        <action name="paymentSearch" class="com.mss.ediscv.payments.PaymentsAction" method="getPaymentSearchQuery">
+            <result>/payment/Payments.jsp</result>
+            <result name="error" type="redirect" >../exception/exception.action</result> 
+            <result type="redirect" name="login">../general/login.action</result>       
+        </action>
+    </package>
+</struts>
+

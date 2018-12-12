@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+
+<struts>
+
+    <package name = "utilpack" namespace = "/utilities" extends = "default">
+        <default-interceptor-ref name = "crudStack"/>
+           <action name="certMonitor" class = "com.mss.ediscv.utilities.CertMonitorAction">
+            <result>/utilities/certMonitor.jsp </result>
+            <result name="error" type="redirect" >../general/exception.action</result> 
+            <result type="redirect" name="login">../general/login.action</result>   
+        </action>
+        
+        <action name="certMonitorSearch" class="com.mss.ediscv.utilities.CertMonitorAction" method="getCertMonitor">
+            <result>/utilities/certMonitor.jsp</result>
+            <result name="error" type="redirect" >../general/exception.action</result> 
+            <result type="redirect" name="login">../general/login.action</result>
+        </action>
+        
+        <action name="codeList" class="com.mss.ediscv.utilities.CertMonitorAction" method="codeList">
+            <result>/utilities/codeList.jsp</result>
+            <result name="error" type="redirect" >../general/exception.action</result> 
+            <result type="redirect" name="login">../general/login.action</result>
+        </action>
+         <action name="codeListSearch" class="com.mss.ediscv.utilities.CertMonitorAction" method="getCodeListItems">
+            <result>/utilities/codeList.jsp</result>
+            <result name="error" type="redirect" >../general/exception.action</result> 
+            <result type="redirect" name="login">../general/login.action</result>
+        </action>
+        
+          <action name="getCodeListName" class="com.mss.ediscv.utilities.CertMonitorAction" method="getCodeListName">
+            <result>/utilities/codeList.jsp</result>
+            <result name="error" type="redirect" >../general/exception.action</result> 
+            <result type="redirect" name="login">../general/login.action</result>
+        </action>
+         
+           <action name="getProcessFlows" class="com.mss.ediscv.utilities.CertMonitorAction" method="doGetProcessFlows">
+            <result>/utilities/processFlow.jsp</result>
+            <result name="error" type="redirect" >../general/exception.action</result> 
+            <result type="redirect" name="login">../general/login.action</result>
+        </action>
+         
+          <action name="addFlow" class="com.mss.ediscv.utilities.CertMonitorAction" method="addProcessFlow">
+            <result>/utilities/addProcessFlow.jsp</result>
+            <result name="error" type="redirect" >../general/exception.action</result> 
+            <result type="redirect" name="login">../general/login.action</result>
+        </action>
+    </package>
+
+</struts>
+

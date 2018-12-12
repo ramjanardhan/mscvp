@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<!--
+    Document   : ajax.xml
+    Created on : Mar 20, 2013, 4:51 PM
+    Author     : miracle
+    Description: Purpose of the document follows.
+-->
+
+<struts>
+    <package name="ajax" extends="default" namespace="/ajax">
+
+        <default-interceptor-ref name="crudStack"/>
+        <action name="forgotpassword" class="com.mss.ediscv.ajax.AjaxHandlerAction" method="forgotPassword"/>
+        <action name="getPoDetails" class="com.mss.ediscv.ajax.AjaxHandlerAction" method="getPoDetails"/>
+        <action name="getASNDetails" class="com.mss.ediscv.ajax.AjaxHandlerAction" method="getAsnDetails"/>
+        <action name="getInvDetails" class="com.mss.ediscv.ajax.AjaxHandlerAction" method="getInvDetails"/>
+        <action name="getPaymentDetails" class="com.mss.ediscv.ajax.AjaxHandlerAction" method="getPaymentDetails"/>
+        
+        <action name="getDocDetails" class="com.mss.ediscv.ajax.AjaxHandlerAction" method="getDocDetails"/>
+         
+        <action name="getReportDeleteDetails" class="com.mss.ediscv.ajax.AjaxHandlerAction" method="getReportDeleteDetails"/>
+         
+        <action name="getDocCopy" class="com.mss.ediscv.ajax.AjaxHandlerAction" method="getDocCopy"/>
+        
+        <!-- ASN COPY LIST Actions -->
+        <action name="getDocASNCopy" class="com.mss.ediscv.ajax.AjaxHandlerAction" method="getDocASNCopy"/> 
+        <action name="getInvCopy" class="com.mss.ediscv.ajax.AjaxHandlerAction" method="getInvCopy"/>
+        <action name="getPaymentCopy" class="com.mss.ediscv.ajax.AjaxHandlerAction" method="getPaymentCopy"/>
+        <action name="getLoadCopy" class="com.mss.ediscv.ajax.AjaxHandlerAction" method="getLoadCopy"/>
+         
+         
+        <!-- Life cycle Actions -->
+        <action name="LifecycleDetails" class="com.mss.ediscv.ajax.AjaxHandlerAction" method="getLifecycleDetails"/>
+        <action name="ltLifecycleDetails" class="com.mss.ediscv.ajax.AjaxHandlerAction" method="getLtLifecycleDetails"/>
+         
+        <!-- TP Actions  -->
+         
+        <action name="getTpDetails" class="com.mss.ediscv.ajax.AjaxHandlerAction" method="getTpDetails"/>
+        <action name="updateTpDetails" class="com.mss.ediscv.ajax.AjaxHandlerAction" method="updateTpDetails"/>
+        <action name="getTpDetailsByName" class="com.mss.ediscv.ajax.AjaxHandlerAction" method="getTpDetailsByName"/>
+        <action name="getTpDetailInformation" class="com.mss.ediscv.ajax.AjaxHandlerAction" method="getTpDetailInformation"/>
+        <action name="getLogisticsDocDetails" class="com.mss.ediscv.ajax.AjaxHandlerAction" method="getLogisticsDocDetails"/>
+        <action name="getLoadTenderingDetails" class="com.mss.ediscv.ajax.AjaxHandlerAction" method="getLoadTenderingDetails"/>
+        <action name="getLtResponseDetails" class="com.mss.ediscv.ajax.AjaxHandlerAction" method="getLtResponseDetails"/>
+        <action name="getLogisticsInvDetails" class="com.mss.ediscv.ajax.AjaxHandlerAction" method="getLogisticsInvDetails"/>
+        <action name="getLogisticsShipmentDetails" class="com.mss.ediscv.ajax.AjaxHandlerAction" method="getLogisticsShipmentDetails"/>
+        <action name="getDocVisibilityDetails" class="com.mss.ediscv.ajax.AjaxHandlerAction" method="getDocVisibilityDetails"/>
+        <action name="getPartnerDetails" class="com.mss.ediscv.ajax.AjaxHandlerAction" method="getPartnerDetails"/>
+        <action name="getRoutingDetails" class="com.mss.ediscv.ajax.AjaxHandlerAction" method="getRoutingDetails"/>
+        <action name="getB2bChannelDetails" class="com.mss.ediscv.ajax.AjaxHandlerAction" method="getB2bChannelDetails"/>
+        <action name="getPartnerInfo" class="com.mss.ediscv.ajax.AjaxHandlerAction" method="getPartnerInfo"/>
+        <action name="getRouterInfo" class="com.mss.ediscv.ajax.AjaxHandlerAction" method="getRouterInfo"/>
+        <action name="getBusinessProcessInfo" class="com.mss.ediscv.ajax.AjaxHandlerAction" method="getBusinessProcessInfo"/>
+        <action name="getDeliveryChannelDetails" class="com.mss.ediscv.ajax.AjaxHandlerAction" method="getDeliveryChannelDetails"/>
+        <action name="getDashboardDetails" class="com.mss.ediscv.ajax.AjaxHandlerAction" method="getDashboardDetails"/>
+        <action name="getReportOverlayDetails" class="com.mss.ediscv.ajax.AjaxHandlerAction" method="getReportOverlayDetails"/>   
+        <action name="changePassword" class="com.mss.ediscv.ajax.AjaxHandlerAction" method="changePassword"/>   
+        <!--method to search whether sender item and receiver item exists in the database for code list or not -->
+        <action name="searchItems" class="com.mss.ediscv.ajax.AjaxHandlerAction" method="searchItems"/> 
+        <!-- method to check whether new code list name exists in the database or not for adding new code list-->
+        <action name="checkCodeListName" class="com.mss.ediscv.ajax.AjaxHandlerAction" method="checkCodeListName"/> 
+        
+        
+        <action name="codeListAdd" class="com.mss.ediscv.ajax.AjaxHandlerAction" method="doCodeListAdd"/>
+         
+       
+        <action name="codeListDelete" class="com.mss.ediscv.ajax.AjaxHandlerAction" method="doCodeListDelete"/>
+           
+        <!-- new xml added Hyma-->
+        <action name="codeVersionUpdate" class="com.mss.ediscv.ajax.AjaxHandlerAction" method="doCodeVersionUpdate"/>
+        <action name="getInventoryDetails" class="com.mss.ediscv.ajax.AjaxHandlerAction" method="getInventoryDetails"/>
+            
+        <!-- process flow -->
+              
+        <action name="doGetMapList" class="com.mss.ediscv.ajax.AjaxHandlerAction" method="doGetMapList"/>
+         
+        <action name="getProcessFlow" class="com.mss.ediscv.ajax.AjaxHandlerAction" method="doGetProcessFlow"/>
+        <action name="saveProcessFlow" class="com.mss.ediscv.ajax.AjaxHandlerAction" method="doSaveProcessFlow"/>
+        <action name="doGetMailBoxList" class="com.mss.ediscv.ajax.AjaxHandlerAction" method="doGetMailBoxList"/>
+        <action name="doGetTpList" class="com.mss.ediscv.ajax.AjaxHandlerAction" method="doGetTpList"/>
+        <action name="getTransactionsBasedOnType" class="com.mss.ediscv.ajax.AjaxHandlerAction" method="getTransactionsBasedOnType"/>  
+        <action name="getPartnerAndDocType" class="com.mss.ediscv.ajax.AjaxHandlerAction" method="getPartnerAndDocType"/> 
+        <!-- process flow end-->
+             
+             
+        <action name="getTransactionReferences" class="com.mss.ediscv.ajax.AjaxHandlerAction" method="getTransactionReferences"/>
+        
+        <action name="getPrePosttranslationPathData" class="com.mss.ediscv.ajax.AjaxHandlerAction" method="getPrePosttranslationPathData"/>
+        <!-- for App configuration -->
+        <action name="appConfigEditTimeinterval" class="com.mss.ediscv.ajax.AjaxHandlerAction" method="appConfigEditTimeinterval"/>
+        <action name="appConfigEditTop10EDITP" class="com.mss.ediscv.ajax.AjaxHandlerAction" method="appConfigEditTop10EDITP"/>
+        <action name="appConfigEditTop10RailTP" class="com.mss.ediscv.ajax.AjaxHandlerAction" method="appConfigEditTop10RailTP"/>
+        <action name="appConfigEditScvpDatabaseValues" class="com.mss.ediscv.ajax.AjaxHandlerAction" method="appConfigEditScvpDatabaseValues"/>
+        <action name="appConfigEditTransactions" class="com.mss.ediscv.ajax.AjaxHandlerAction" method="appConfigEditTransactions"/>
+    </package>
+</struts>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<!--
+    Document   : ajax.xml
+    Created on : Mar 20, 2013, 4:51 PM
+    Author     : miracle
+    Description:
+        Purpose of the document follows.
+-->
+
+<struts>
+    <package name="dashboard" extends="default" namespace="/dashboard">
+        <default-interceptor-ref name="crudStack"/>
+        <action name="getDailyStatsView" class="com.mss.ediscv.dashboard.DashBoardAction" method="getDailyStatsView">
+            <result>../dashboard/DailyStatsView.jsp</result>
+            <result name="error" type="redirect" >../general/exception.action</result>
+            <result type="redirect" name="login">../general/login.action</result> 
+        </action>
+       
+        <action name="getBusinessFlow" class="com.mss.ediscv.dashboard.DashBoardAction" method="getBusinessFlow">
+            <result>../dashboard/BusinessFlows.jsp</result>
+            <result name="error" type="redirect" >../general/exception.action</result> 
+            <result type="redirect" name="login">../general/login.action</result>  
+        </action>
+        
+        <action name="getEDIDocuments" class="com.mss.ediscv.dashboard.DashBoardAction" method="getEDIDocuments">
+            <result name="LSUCCESS">../dashboard/LEDIBusinessDocuments.jsp</result>
+            <result name="MSUCCESS">../dashboard/MEDIBusinessDocuments.jsp</result>
+            <result name="error" type="redirect" >../general/exception.action</result> 
+            <result type="redirect" name="login">../general/login.action</result>  
+        </action>
+       
+               <action name="getBusinessTrendsDocument" class="com.mss.ediscv.dashboard.DashBoardAction" method="getBusinessTrendsDocument">
+            <result>../dashboard/BusinessTrendsDocument.jsp</result>
+            <result name="error" type="redirect" >../general/exception.action</result> 
+            <result type="redirect" name="login">../general/login.action</result>  
+        </action>
+        
+        <action name="ediBusinessSearchTrends" class="com.mss.ediscv.dashboard.DashBoardAction" method="ediBusinessSearchTrends">
+            <result>../dashboard/BusinessTrendsDocument.jsp</result>
+            <result name="error" type="redirect" >../general/exception.action</result> 
+            <result type="redirect" name="login">../general/login.action</result>  
+        </action>
+
+        <action name="getBusinessTrendsTP" class="com.mss.ediscv.dashboard.DashBoardAction" method="getBusinessTrendsTP">
+            <result>../dashboard/BusinessTrendTP.jsp</result>
+            <result name="error" type="redirect" >../general/exception.action</result> 
+            <result type="redirect" name="login">../general/login.action</result>  
+        </action>
+        
+        <action name="tpBusinessSearchTrends" class="com.mss.ediscv.dashboard.DashBoardAction" method="tpBusinessSearchTrends">
+            <result>../dashboard/BusinessTrendTP.jsp</result>
+            <result name="error" type="redirect" >../general/exception.action</result> 
+            <result type="redirect" name="login">../general/login.action</result>  
+        </action>
+       
+    </package>
+</struts>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <package name="shipment" namespace="/shipment" extends="default">
+        <default-interceptor-ref name="crudStack"/>
+       
+        <action name="shipmentAction" class="com.mss.ediscv.shipment.ShipmentSearchAction" method="prepare">
+            <result>/shipment/Shipments.jsp</result>
+            <result name="error" type="redirect" >../exception/exception.action</result> 
+            <result type="redirect" name="login">../general/login.action</result> 
+        </action>
+        
+        <action name="shipmentSearch" class="com.mss.ediscv.shipment.ShipmentSearchAction" method="getShipmentSearchQuery">
+            <result>/shipment/Shipments.jsp</result>
+            <result name="error" type="redirect" >../exception/exception.action</result> 
+            <result type="redirect" name="login">../general/login.action</result>       
+        </action>
+        
+    </package>
+</struts>
+

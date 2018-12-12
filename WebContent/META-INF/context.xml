@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <Context antiJARLocking="true" path="/ediscv"> -->
+<Context antiJARLocking="true" path="/ediscv">
+  <!--  <Resource 
+        auth="Container" 
+        description="c3pO DataSource" 
+        driverClass="com.mysql.jdbc.Driver" 
+        name="jndi/mscvp" 
+        user="AppAdmin" 
+        password="hubble2k12" 
+        factory="org.apache.naming.factory.BeanFactory" 
+        type="com.mchange.v2.c3p0.ComboPooledDataSource" 
+        jdbcUrl="jdbc:mysql://172.17.4.174:3306/EDISCV?autoReconnect=true" 
+    /> --> 
+</Context>

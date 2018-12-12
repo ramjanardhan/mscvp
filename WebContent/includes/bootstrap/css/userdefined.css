@@ -1,0 +1,86 @@
+.form-control:focus{border-color:#8c8c8c;}
+.btn {
+    border-radius: 0px;
+}
+ul li:hover ul {display: block;}
+.noMargin{margin:0px !important;}
+.noMarginBottom{margin-bottom:0px !important;}
+.noMarginTop{margin-top:0px !important;}
+
+
+.labelw{
+    color: #fff;
+}
+.loadingImg {
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    position: fixed;
+    display: block;
+    opacity: 0.7;
+    background-color: #9999C2;
+    z-index: 99;
+    text-align: center;
+}
+
+#LoadingContent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 100;
+}
+#LoadingContent > img{
+    width:150px;
+}
+
+.hide-menu
+{
+    background-color:#232527;
+    position: fixed;
+    top:49px;
+    bottom:200px;
+    right:-46px;
+    z-index: 1000;
+    overflow: scroll;
+    width: 330px;
+    height: 781px;
+    -webkit-transform: translate3d(300px,0,0);
+    -moz-transform: translate3d(300px,0,0);
+    -o-transform: translate3d(300px,0,0);
+    -ms-transform: translate3d(300px,0,0);
+    transform: translate3d(300px,0,0);      
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -ms-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+    border-top: 3px solid black;
+}
+
+.show-menu      
+{
+    -webkit-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+    -o-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+    position: absolute;
+}  
+
+.menu-button
+{
+    border:1px solid #000;
+    color:fff;
+    display:inline-block;
+    cursor:pointer;
+}
+.modal-lg {
+    width: 770px;
+}
+h3{
+    color:#00aae7;
+}
+.clear {
+    clear: both;
+}

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+    <Appenders>
+        <Console name="CONSOLE" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+        </Console>
+        <RollingFile name="RollingFile" fileName="/APPL/MSCVP/logs/mscvp.log" filePattern="/APPL/MSCVP/logs/archive/$${date:yyyy-MM}/msvp-%d{yyyy-MM-dd}-%i.log.gz" >
+            <PatternLayout pattern="%d{dd MMM yyyy HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy />
+                <SizeBasedTriggeringPolicy size="50 MB" />
+            </Policies>
+            <DefaultRolloverStrategy max="10"/>
+        </RollingFile>
+        <Async name="ASYNC">
+            <AppenderRef ref="RollingFile"/>
+            <AppenderRef ref="CONSOLE"/>
+        </Async>
+    </Appenders>
+    
+    <Loggers>
+        <Logger name="com.mchange.v2.c3p0.ComboPooledDataSource" level="info" additivity="false">
+            <AppenderRef ref="ASYNC"/>
+        </Logger>
+        <Root level="debug">
+            <AppenderRef ref="ASYNC"/>
+        </Root>
+    </Loggers>
+</Configuration>
